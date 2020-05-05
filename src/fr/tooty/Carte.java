@@ -1,20 +1,22 @@
 package fr.tooty;
 
+/**
+ * Carte énumère les différentes valeurs possible pour une carte
+ */
 public enum Carte {
-	BLEU('b'),
-	ROUGE('r'),
-	T1('1'),
-	T2('2'),
-	T3('3');
+	TAILLE_1(1),
+	TAILLE_2(2),
+	TAILLE_3(3),
+	BLEU(-1),
+	ROUGE(-2),
+	INCONNUE(-10);
 	
-	private char valeur;
+	private int valeur;
 	
-	//constructeur
-	Carte(char c){
+	Carte(int c){
 		this.valeur = c;
 	}
-	//Methode
-	public char getCarte() {
+	public int getValeur() {
 		return this.valeur;
 	}
 }
